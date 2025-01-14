@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<PaginaCarga image={image} setImage={setImage} />} />
-        <Route path="/resultado" element={<PaginaResultado2 image={image} />} />
+        <Route path="/resultado" element={<PaginaResultado image={image} />} />
       </Routes>
     </Router>
   );

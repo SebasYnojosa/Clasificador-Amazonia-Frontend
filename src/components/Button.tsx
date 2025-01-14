@@ -11,6 +11,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
             onClick={onClick}
             style={{
                 width: '100%',
+                maxWidth: '224px',
                 marginTop: '16px',
                 padding: '8px 32px',
                 borderRadius: '4px',
