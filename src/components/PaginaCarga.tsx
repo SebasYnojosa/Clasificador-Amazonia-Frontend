@@ -60,6 +60,8 @@ const PaginaCarga: React.FC<PaginaCargaProps> = ({ image, setImage }) => {
             const result = await response.json();
             console.log(result);
 
+
+
             // Redirigir a la página de resultados
             navigate('/resultado', { state: { image, result } });
         } catch (error) {
@@ -82,12 +84,12 @@ const PaginaCarga: React.FC<PaginaCargaProps> = ({ image, setImage }) => {
                         onChange={handleImageUpload}
                         style={{ display: 'none' }}
                     />
-                    <Button onClick={() => fileInputRef.current?.click()}>Choose File</Button>
+                    <Button onClick={() => fileInputRef.current?.click()}>Elegir Imagen</Button>
                 </label>
                 {fileName && <p>{fileName}</p>}
                 {image && <img src={image as string} alt="Uploaded" style={{ marginTop: '16px', maxWidth: '224px', maxHeight: '224px' }} />}
                 <div style={{ display: 'flex', gap: '8px' }}>
-                    <Button onClick={handleClearClick}>Clear</Button>
+                    <Button onClick={handleClearClick}>Limpiar</Button>
                     <Button onClick={handleAnalyzeClick}>Analizar</Button>
                 </div>
             </div>

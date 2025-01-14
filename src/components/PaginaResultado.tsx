@@ -17,6 +17,8 @@ const PaginaResultado: React.FC<PaginaResultadoProps> = () => {
         navigate('/');
     };
 
+    const result_count = result ? Object.entries(result) : [];
+
     return (
         <>
             <Header />
@@ -25,9 +27,15 @@ const PaginaResultado: React.FC<PaginaResultadoProps> = () => {
                 {image && <img src={image as string} alt="Uploaded" style={{ marginTop: '16px', maxWidth: '224px', maxHeight: '224px' }} />}
                 <p>Aquí se mostrarán los resultados de la clasificación de la imagen.</p>
                 <div style={{ textAlign: 'left', display: 'inline-block', marginTop: '16px' }}>
-                    {result && Object.entries(result).map(([key, value]) => (
-                        <p>Estamos ante un  <span style={{ textTransform: 'capitalize' }}>{value}</span></p>
-                    ))}
+                    {result_count.length === 1 ? (
+                        <p>Estamos ante un <span style={{ textTransform: 'capitalize' }}>{result_count[0][1]}</span>.</p>
+                    ) : (
+                        <ul>
+                            {result_count.reverse().map(([key, value]) => (
+                                <li key={key}>{key}: {value} de pertenencia.</li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
                 <Button onClick={handleBackClick}>Volver</Button>
             </div>
