@@ -9,9 +9,13 @@ const Header: React.FC = () => {
             backgroundPosition: 'center', 
             color: '#000', 
             padding: '10px 0', 
-            textAlign: 'center' 
+            textAlign: 'center',
+            fontFamily: 'Work Sans, serif',
+            fontOpticalSizing: 'auto',
+            fontWeight: 900,
+            fontStyle: 'bold'
         }}>
-            <h1>Clasificador de imagenes de tribus de la Amazonia</h1>
+            <h1>Clasificador de imágenes de tribus de la Amazonia</h1>
         </header>
     );
 };

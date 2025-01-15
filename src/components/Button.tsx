@@ -16,8 +16,8 @@ const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
                 padding: '8px 32px',
                 borderRadius: '4px',
                 border: 'none',
-                backgroundColor: '#007BFF',
-                color: '#fff',
+                backgroundColor: '#FF6D33',
+                color: '#FFF',
                 cursor: 'pointer'
             }}
         >
